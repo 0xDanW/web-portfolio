@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="images/DW-header-logo.png"/>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/animation.css">
+    <script src="https://kit.fontawesome.com/0a85387b17.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,13 +16,15 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/Daniel-logo.png" class="logo">
-            <ul>
-                <li><a href="#" style="--i:1">Home</a></li>
-                <li><a href="#" style="--i:2">About</a></li>
-                <li><a href="#" style="--i:3">Portfolio</a></li>
-                <li><a href="#" style="--i:4">Contact</a></li>
+            <a href="#header"><img src="images/Daniel-logo.png" class="logo"></a>
+            <ul id="sidemenu">
+                <li><a href="#header" style="--i:1">Home</a></li>
+                <li><a href="#about" style="--i:2">About</a></li>
+                <li><a href="#portfolio" style="--i:3">Portfolio</a></li>
+                <li><a href="#contact" style="--i:4">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
             <p id="first-line">Hi, everyone! I'm</p>
@@ -39,20 +42,110 @@
             <div class="about-col-1">
                 <img src="images/user.png">
             </div>
+
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p class="about-me-text">Yep hahaha</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>12/2022 - Present</span><br>Information Security Engineer Intern @ Intel Corporate</li>
+                        <li><span>04/2022 - 12/2022</span><br>IT Analyst @ 180 Degrees Consulting KL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>08/2020 - Present</span><br>Computer Networking and Security Degree @ Sunway University</li>
+                        <li><span>07/2019 - 07/2020</span><br>Monash University Foundation Year (MUFY) @ Sunway College</li>
+                        <li><span>01/2015 - 06/2019</span><br>IGCSE @ Frontier Learning Centre (FLC)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Description One Here</p>
+                    <a href="#"><i class="fas fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>Description Two Here</p>
+                    <a href="#"><i class="fas fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>Description Three Here</p>
+                    <a href="#"><i class="fas fa-external-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>wongyuheng2003@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>017-694 7260</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/daniel.wong.35728466"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/danielwyh_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/daniel-wong-yu-heng-276b0021a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/danielwyh"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:wongyuheng2003@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="images/Daniel - CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">Your message has been sent! Thank you!</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Daniel Wong Yu Heng. Made with <i class="fa-solid fa-heart"></i> by Daniel Wong Yu Heng</p>
+    </div>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="JS/typed-script.js"></script>
+<script src="JS/script.js"></script>
+<script src="JS/contact-form.js"></script>
 </body>
 </html>
