@@ -17,3 +17,143 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 140px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0ef;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text #first-line {
+    opacity: 0;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 60px;
+    opacity: 0;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.header-text h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.header-text h3 span {
+    color: #0ef;
+}
+
+.header-text #second-line {
+    font-size: 20px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: slideLeft 0.6s ease forwards;
+    animation-delay: 1s;
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
