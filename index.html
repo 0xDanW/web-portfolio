@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Wong | Personal Portfolio</title>
+    <title>Daniel Wong | Website Portfolio</title>
     <link rel="shortcut icon" type="image/png" href="images/DW-header-logo.png"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animation.css">
 </head>
 
 <body>
+<!-- Header Section -->
 <div id="header">
     <div class="container">
         <nav>
@@ -23,13 +25,26 @@
         </nav>
         <div class="header-text">
             <p id="first-line">Hi, everyone! I'm</p>
-            <h1>Daniel Wong</h1>
-            <h3>And I'm a <span>Cybersecurity Student</span></h3>
+            <h1><span id="first-name">Daniel</span> Wong</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
             <p id="second-line">Just an ordinary tech enthusiast who loves to meddle with tech-related things!</p>
         </div>
     </div>
 </div>
 
-<script src="script.js"></script>
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="JS/typed-script.js"></script>
 </body>
 </html>
