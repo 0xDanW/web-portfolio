@@ -190,9 +190,9 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 .about-me-text {
-    font-size: 20px;
-    text-align: justify;
-    margin-top: 30px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 20px;
     line-height: 180%;
 }
 
@@ -441,6 +441,11 @@ nav .fa-solid {
     #header {
         background-image: url(../images/small-background.png);
     }
+
+    .header-text {
+        margin-top: 50%;
+        font-size: 24px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -449,8 +454,89 @@ nav .fa-solid {
     }
 
     .header-text {
-        margin-top: 85%;
+        margin-top: 20%;
         font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .header-text #second-line {
+        font-size: 16px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #0ef;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #header {
+        background-image: url(../images/smallest-background.png);
+    }
+
+    .header-text {
+        margin-top: 35%;
+        font-size: 16px;
     }
 
     .header-text h1 {
